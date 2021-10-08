@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public static float score = 0;
+    public static float score = 0;    
 
     // Start is called before the first frame update
     void Start()

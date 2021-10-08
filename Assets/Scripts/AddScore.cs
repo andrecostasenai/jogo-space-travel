@@ -6,6 +6,11 @@ public class AddScore : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Score.score++;
+        if (!collision.gameObject.CompareTag("tiro"))
+        {
+            Score.score++;
+            if (Score.score % 5 == 0)
+                Arma.tiros += 5;
+        }        
     }
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - chao
   - obstaculo
+  - nave
+  - tiro
   layers:
   - Default
   - TransparentFX

@@ -18,14 +18,21 @@ public class Nave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VerificaPular();
-    }
-
-    void VerificaPular()
-    {                
-        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             rb.velocity = Vector2.up * velocity;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            rb.velocity = Vector2.down * velocity;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            rb.velocity = Vector2.left * velocity;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            rb.velocity = Vector2.right * (velocity - 1);
         }
     }
 

@@ -12,6 +12,13 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    private void Update()
+    {
+        if (gameOverCanvas.activeSelf)        
+            if (Input.GetKey(KeyCode.Space))            
+                Play();        
+    }
+
     public void GameOver()
     {
         gameOverCanvas.SetActive(true);
